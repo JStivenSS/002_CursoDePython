@@ -18,10 +18,23 @@ print(prices)
 
 
 def add_taxes(item):
-    item['taxes'] = item['price'] * .19
-    return item
+    new_items = item.copy()
+    new_items['taxes'] = new_items['price'] * .19
+    return new_items
 
 
 new_items = list(map(add_taxes, items))
 
 print(new_items)
+print(items)
+
+
+def multiply_numbers(numbers):
+    # Escribe tu solución 👇
+    result = list(map(lambda item: item*2, numbers))
+    return result
+
+
+numbers = [1, 2, 3, 4]
+response = multiply_numbers(numbers)
+print(response)
