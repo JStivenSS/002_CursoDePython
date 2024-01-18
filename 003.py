@@ -16,7 +16,7 @@ for i in countries:
     population[i] = random.randint(1, 100)
 print(population)
 
-population2 = {i: random.randint(1, 100) for i in countries}
+population2 = {i: random.randint(1, 600) for i in countries}
 print(population2)
 
 

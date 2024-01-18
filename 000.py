@@ -1,18 +1,27 @@
-from turtle import *
-from colorsys import *
+person = {
+  'name': 'nico',
+  'last_name': 'molina',
+  'langs': ['python', 'javascript'],
+  'age': 99
+}
 
-bgcolor("black")
-tracer(2)
-pensize(2)
-h = 0
+print(person)
 
-for i in range(180):
-    c = hsv_to_rgb(h, 1, 1)
-    h += 0.005
-    color(c)
-    up(), goto(-8, 25), down(), forward(i)
-    right(89), fillcolor(c), begin_fill()
-    circle(90, 100), end_fill(), left(179)
-    back(i/2), left(6)
+person['name'] = 'santi'
+person['age'] -= 50
+person['langs'].append('rust')
+print(person)
 
-done()
+del person['last_name']
+person.pop('age')
+
+print(person)
+
+print('items')
+print(person.items())
+
+print('keys')
+print(person.keys())
+
+print('values')
+print(person.values())
