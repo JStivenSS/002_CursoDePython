@@ -1,4 +1,4 @@
-'''
+
 import random
 countries = ['col', 'mex', 'bra', 'arg', 'chi']
 population = {i: random.randint(1, 100) for i in countries}
@@ -13,7 +13,7 @@ print(sum(i for i in newDict.values()))
 text = 'Hola, soy José Alexander y me gusta programar en Python'
 unique = {c: text.count(c) for c in text if c in 'aeiou'}
 print(unique)
-'''
+
 numbers = [35, 16, 10, 34, 37, 25]
 
 even_numbers = []

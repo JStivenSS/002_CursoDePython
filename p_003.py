@@ -64,16 +64,17 @@ calificaciones = [85, 92, 78, 95, 89]
 
 notas = {nombre: nota for (nombre, nota) in zip(estudiantes, calificaciones)}
 
-for nombre, notas in notas.items():
-  print(f'Nombre: {nombre} || Nota: {notas}')
+for nombre, nota in notas.items():
+  print(f'Nombre: {nombre} || Nota: {nota}')
 
 
 for i in range(5):
   print('')
-  
+
+from collections import Counter
 texto = "programacion en python"
 
-frecuencia = {indice: texto.count(indice) for indice in texto}
+frecuencia = Counter(texto)
 
 for letra, fre in frecuencia.items():
   print(f'Letra: {letra} Apariciones: {fre}')
@@ -85,7 +86,7 @@ productos = ['Manzanas', 'Leche', 'Pan', 'Huevos']
 precios = [2.5, 1.0, 0.8, 0.2]
 cantidades = [3, 2, 1, 12]
 
-compras = {productos: {'precio': precios, 'cantidad': cantidades} for (productos, precios, cantidades) in zip (productos, precios, cantidades)}
+compras = {producto: {'precio': precio, 'cantidad': cantidad} for (producto, precio, cantidad) in zip (productos, precios, cantidades)}
 
 for producto, detalles in compras.items():
   print(f'Producto: {producto}')
